@@ -2,4 +2,4 @@
 
 Welcome to Code Reviewer python
 
-To start please run the file named `setup.py`
+To start please run the file named `setup.py` then run the `main.py`

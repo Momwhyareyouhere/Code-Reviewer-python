@@ -19,7 +19,7 @@ if os.name == 'posix':
     elif 'darwin' in distro:  
         silent_install("brew install python-tk")
 
-print("Installation completed. Running main.py")
 
 silent_install("pip install flake8")
-silent_install("python main.py")
+
+print("SUCESS. Now you can run main.py")
