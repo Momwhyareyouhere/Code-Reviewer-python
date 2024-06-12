@@ -5,7 +5,7 @@ from tkinter import filedialog, messagebox
 
 def choose_file():
     root = tk.Tk()
-    root.withdraw()  # Hide the root window
+    root.withdraw()  
     file_path = filedialog.askopenfilename(filetypes=[("Python files", "*.py")])
     if not file_path:
         messagebox.showinfo("No file selected", "Please select a Python file.")
@@ -34,12 +34,12 @@ def review_code(file_path):
 
     print(f"Reviewing file: {file_path}")
     
-    # Run flake8 on the selected file
+    
     result = subprocess.run(['flake8', file_path], capture_output=True, text=True)
     issues = result.stdout.strip().split('\n')
     num_issues = len(issues) if issues[0] else 0
     
-    # Calculate the score
+   
     score = calculate_score(num_issues)
     
     if num_issues == 0:
